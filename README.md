@@ -6,7 +6,7 @@ it as an attribute of `req`, or returning 404 if not found.
 ## Installation
 
 ```bash
-npm install @ryanburnette/find-one-record
+npm install ryanburnette/find-one-record
 ```
 
 ## Usage
