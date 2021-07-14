@@ -1,0 +1,19 @@
+{
+  "name": "@ryanburnette/find-one-record",
+  "version": "1.0.0",
+  "description": "Express middleware factory for finding one record with Sequelize and attaching it as an attribute of `req`, or returning 404 if not found.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanburnette/find-one-record.git"
+  },
+  "author": "Ryan Burnette <ryan.burnette@gmail.com> (https://ryanburnette.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "jshint": "^2.13.0",
+    "prettier": "^2.3.2"
+  }
+}
