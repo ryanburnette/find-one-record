@@ -7,18 +7,20 @@ function findOneRecordMiddlewareFactory(options) {
   if (!options.model) {
     throw new Error('options.model is required');
   }
-  var { model, pkName } = options;
-  return async function findOneRecordMiddleware(req, res, next) {
+  var model = options.model;
+  var pkName = options.pkName;
+  return function findOneRecordMiddleware(req, res, next) {
     var pk = req.params[pkName] || req.body[pkName];
     var where = {};
     where[pkName] = pk;
-    req.record = await model.findOne({ where });
-    if (!req.record) {
-      res.statusCode = 404;
-      res.end();
-      return;
-    }
-    next();
+    model.findOne({ where: where }).then(function (record) {
+      if (!req.record) {
+        res.statusCode = 404;
+        res.end();
+        return;
+      }
+      next();
+    });
   };
 }
 
