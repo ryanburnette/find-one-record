@@ -1,6 +1,6 @@
 {
   "name": "@ryanburnette/find-one-record",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Express middleware factory for finding one record with Sequelize and attaching it as an attribute of `req`, or returning 404 if not found.",
   "main": "index.js",
   "scripts": {

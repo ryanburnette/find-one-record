@@ -14,11 +14,12 @@ function findOneRecordMiddlewareFactory(options) {
     var where = {};
     where[pkName] = pk;
     model.findOne({ where: where }).then(function (record) {
-      if (!req.record) {
+      if (!record) {
         res.statusCode = 404;
         res.end();
         return;
       }
+      req.record = record;
       next();
     });
   };
